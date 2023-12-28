@@ -20,14 +20,35 @@
     </div>
 </div>
 <!-- end buscador -->
-<div class="max-w-screen-xl px-4 py-2 mx-auto">
-    <div class="flex justify-center items-center">
-        <div class="card">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                <!-- {{}} -->
-            </h5>
+<div class="content px-2">
+    <div class="flex flex-col justify-center items-center">
+        <div class="card py-4 px-2 w-full" *ngFor="let order of orders">
+            <div class="flex">
+                <h5 class="mx-2 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-700">Order: </h5>
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    {{order._id}}
+                </h5>
+            </div>
             <div
-                class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-zinc-900 dark:border-zinc-800">
+                <div class="card-header flex justify-between">
+                    <div class="flex column-6">
+                        <svg class="w-6 h-6 mx-2 text-gray-800 dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15.5 10.25a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Zm0 0a2.225 2.225 0 0 0-1.666.75H12m3.5-.75a2.225 2.225 0 0 1 1.666.75H19V7m-7 4V3h5l2 4m-7 4H6.166a2.225 2.225 0 0 0-1.666-.75M12 11V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v9h1.834a2.225 2.225 0 0 1 1.666-.75M19 7h-6m-8.5 3.25a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z" />
+                        </svg>
+                        <div class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            {{order.type}}
+                        </div>
+                    </div>
+                    <div class="flex column-6">
+                        <div class="mx-2 {{order.status_class}}"></div>
+                        <div class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            {{order.status_string}}
+                        </div>
+                    </div>
+                </div>
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
                     acquisitions of 2021 so far, in reverse chronological order.</p>
                 <a href="#"
