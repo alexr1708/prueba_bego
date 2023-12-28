@@ -1,19 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { routing, appRoutingProviders } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CargoOrdersComponent } from './components/cargo-orders/cargo-orders.component';
+import { CargoDetailsComponent } from './components/cargo-details/cargo-details.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CargoOrdersComponent,
+    CargoDetailsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    routing
   ],
   providers: [
-    provideClientHydration()
+    appRoutingProviders
   ],
   bootstrap: [AppComponent]
 })
