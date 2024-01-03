@@ -6,11 +6,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CargoOrdersComponent } from './components/cargo-orders/cargo-orders.component';
+import { OrderDetailsComponent } from './components/order-details/order-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CargoOrdersComponent
+    CargoOrdersComponent,
+    OrderDetailsComponent
   ],
   imports: [
     BrowserModule,
