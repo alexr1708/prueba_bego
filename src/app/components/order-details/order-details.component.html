@@ -22,33 +22,41 @@
                     </div>
                 </div>
             </div>
-            <div class="w-5/6">
-                <div class="transition">
-                    <!-- header -->
-                    <div
-                        class="accordion-header cursor-pointer transition flex flex-col">
-                        <div class="dark:text-gray-400">
-                            Pickup
+            <div class="w-5/6 border-b">
+                <cdk-accordion class="tab w-full overflow-hidden">
+                    <cdk-accordion-item #accordionItem="cdkAccordionItem" class="example-accordion-item" role="button"
+                        tabindex="0" [attr.id]="'accordion-header-' + 1" [attr.aria-expanded]="accordionItem.expanded"
+                        [attr.aria-controls]="'accordion-body-' + 1">
+                        <div class="example-accordion-item-header flex justify-between"
+                            (click)="accordionItem.toggle()">
+                            <div class="flex flex-col">
+                                <div class="dark:text-gray-400">
+                                    Pickup
+                                </div>
+                                <div class="font-bold text-2xl dark:text-white">
+                                    prueba
+                                </div>
+                                <div class="dark:text-white">
+                                    prueba
+                                </div>
+                                <div class="py-2 px-4 my-4 rounded-full bg-zinc-800 flex items-center">
+                                    <div class="blue-dot-bg"></div>
+                                    <p class="text-white">status</p>
+                                </div>
+                            </div>
+                            <!-- <span class="example-accordion-item-description">
+                                    Click to {{ accordionItem.expanded ? 'close' : 'open' }}
+                                </span> -->
                         </div>
-                        <div class="font-bold text-2xl dark:text-white">
-                            prueba
+                        <div class="text-white bg-zinc-900 leading-normal py-4" role="region"
+                            [style.display]="accordionItem.expanded ? '' : 'none'" [attr.id]="'accordion-body-' + 1"
+                            [attr.aria-labelledby]="'accordion-header-' + 1">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis
+                            excepturi incidunt ipsum deleniti labore, tempore non nam doloribus blanditiis
+                            veritatis illo autem iure aliquid ullam rem tenetur deserunt velit culpa?
                         </div>
-                        <div class="dark:text-white">
-                            prueba
-                        </div>
-                    </div>
-                    <!-- Content -->
-                    <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
-                        <p class="leading-6 font-light pl-9 text-justify">
-                            Our asked sex point her she seems. New plenty she horses parish design you. Stuff sight
-                            equal of my woody. Him children bringing goodness suitable she entirely put
-                            far daughter.
-                        </p>
-                        <button
-                            class="rounded-full bg-indigo-600 text-white font-medium font-lg px-6 py-2 my-5 ml-9">Learn
-                            more</button>
-                    </div>
-                </div>
+                    </cdk-accordion-item>
+                </cdk-accordion>
             </div>
         </div>
     </div>

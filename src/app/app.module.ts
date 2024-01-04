@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CargoOrdersComponent } from './components/cargo-orders/cargo-orders.component';
 import { OrderDetailsComponent } from './components/order-details/order-details.component';
+import {CdkAccordionModule} from '@angular/cdk/accordion';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { OrderDetailsComponent } from './components/order-details/order-details.
     BrowserModule,
     routing,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CdkAccordionModule
   ],
   providers: [
     appRoutingProviders,
