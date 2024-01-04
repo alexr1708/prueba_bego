@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class OrderDetailsComponent {
 
+  items = ['Item 1', 'Item 2'];
+  expandedIndex = 0;
 }
