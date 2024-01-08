@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { CargoOrdersComponent } from './components/cargo-orders/cargo-orders.component';
 import { OrderDetailsComponent } from './components/order-details/order-details.component';
 import {CdkAccordionModule} from '@angular/cdk/accordion';
+import { TrackOrderComponent } from './components/track-order/track-order.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CargoOrdersComponent,
-    OrderDetailsComponent
+    OrderDetailsComponent,
+    TrackOrderComponent
   ],
   imports: [
     BrowserModule,

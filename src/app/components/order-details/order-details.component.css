@@ -1,61 +1,70 @@
 .dot-lg {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
 }
 
 .dot-md {
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
 }
 
 .blue-dot-bg {
-    background: rgb(0, 140, 255);
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    margin-right: 1rem;
+  background: rgb(0, 140, 255);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin-right: 1rem;
 }
 
 .grey-dot-bg {
-    background: rgb(101, 102, 102);
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    margin-right: 1rem;
+  background: rgb(101, 102, 102);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin-right: 1rem;
 }
 
 .border-b {
-    border-color: white;
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
-    border-bottom: -2px;
+  border-color: white;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: -2px;
 }
 
 /* estilos de base */
 
 .example-accordion {
-    display: block;
-  }
-  
-  .example-accordion-item {
-    display: block;
-  }
-  
-  /* .example-accordion-item + .example-accordion-item {
-    border-top: none;
-  } */
-  
-  .example-accordion-item-header {
-    display: flex;
-  }
-  
-  .example-accordion-item:last-child {
-    border-color: white;
-    border-top: 2px;
-    border-right: 0;
-    border-left: 0;
-    border-bottom: 0;
-  }
+  display: block;
+}
+
+.example-accordion-item {
+  display: block;
+}
+
+.example-accordion-item-header {
+  display: flex;
+}
+
+.example-accordion-item:last-child {
+  border-color: white;
+  border-top: 2px;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 0;
+}
+
+#pickup-header-1[aria-expanded="false"]span{
+  transform: rotateX(0deg);
+  transition: transform 1s;
+}
+
+#pickup-header-1[aria-expanded="true"]span{
+  transform: rotateX(180deg);
+  transition: transform 1s; 
+}
+/* #pickup-header-1[aria-expanded="true"].arrow{
+  transform: rotate(0deg);
+} */
